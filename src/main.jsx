@@ -5,6 +5,9 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <div className='relative'>
+      <App />
+
+    </div>
   </StrictMode>,
 )
