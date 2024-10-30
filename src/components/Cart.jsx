@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import cartIcon from '../assets/icon-cart.svg';
 import ItemsList from './ItemsList';
-export default function Cart(){
+export default function Cart({items}){
     const [show,setShow] = useState(false);
     
     return(
@@ -11,10 +11,9 @@ export default function Cart(){
             </button>
             {
                 show &&
-                <div className='rounded shadow-lg mt-9 w-80 m-auto absolute right-0 top-full  py-3'>
+                <div className='rounded shadow-lg mt-9 w-80 m-auto absolute right-0 top-full  py-3 bg-white z-30'>
                     <h3 className=' ps-3 pb-5 border-b'> Cart</h3>
-
-                    <ItemsList />
+                    <ItemsList items={items}/>
                 </div>
             }
         </div>
